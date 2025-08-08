@@ -10,39 +10,47 @@
             letter-spacing: 2px;
             margin-top: 3rem;
         }
-        
-        .skills-text {
-            margin: 2rem 0;
-            
-            .skill-category {
-                margin-bottom: 1.5rem;
-                
-                h4 {
-                    color: #ffd700;
-                    font-size: 1.2rem;
-                    margin-bottom: 0.5rem;
-                    letter-spacing: 1px;
-                }
-                
-                p {
-                    color: #8d8d8d;
-                    font-size: 1rem;
-                    line-height: 1.6;
-                    margin: 0;
-                }
-            }
-        }
+
     
         .tools{
             display: flex;
             align-items: center;
             flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 15px;
+            max-width: 100%;
+            overflow: hidden;
     
             .skills-icon{
-                width: 100px;
+                width: 80px;
+                height: 80px;
                 cursor: pointer;
                 opacity: 0;
                 animation: rollIn 1s 3s forwards;
+                flex-shrink: 0;
+                object-fit: contain;
+            }
+            
+            .fontawesome-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80px;
+                height: 80px;
+                cursor: pointer;
+                opacity: 0;
+                animation: rollIn 1s 3s forwards;
+                flex-shrink: 0;
+                transition: transform 0.3s ease;
+                
+                &:hover {
+                    transform: scale(1.1);
+                }
+                
+                svg {
+                    width: 60px !important;
+                    height: 60px !important;
+                }
             }
         }
     }
@@ -75,6 +83,17 @@
 
         .bx-wrapper{
             width: 100%;
+            padding: 0 20px;
+
+            .tools{
+                justify-content: center;
+                gap: 10px;
+                
+                .skills-icon{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
 
             .page-title{
                 font-size: 33px;

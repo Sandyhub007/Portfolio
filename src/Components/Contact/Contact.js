@@ -25,27 +25,27 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_h7t7s5n",
-        "template_ntp9w64",
+        "service_7bnytu9",
+        "template_6i5lggn",
         refForm.current,
-        "T51543OjelUBvzPtj"
+        "yzslRO5iFy-l8bDiE"
       )
       .then(
         function (response) {
           setEmailStatus(
-            "MESSAGE SUCCESSLLY SENT!",
-            response.status,
-            response.text
+            "MESSAGE SUCCESSFULLY SENT!"
           );
           setTimeout(() => {
             setEmailStatus("");
           }, 3000);
+          // Clear the form after successful send
+          refForm.current.reset();
         },
         function (error) {
-          setEmailStatus("MESSAGE FAILED TRY AGAIN...", error);
+          setEmailStatus("MESSAGE FAILED. Please try again or email me directly at chsandilya456@gmail.com");
           setTimeout(() => {
             setEmailStatus("");
-          }, 3000);
+          }, 5000);
         }
       );
   };
